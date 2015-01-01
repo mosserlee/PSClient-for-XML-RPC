@@ -42,7 +42,7 @@ $string_obj = '<string>www.pstips.net</string>'
 ConvertTo-RPCXmlObject $string_obj
 
 ```
-more to see  [ConvertTo-RPCXmlObject](../test/ConvertTo-RPCXmlObject.Test.ps1).
+more to see  [ConvertTo-RPCXmlObject](test/ConvertTo-RPCXmlObject.Test.ps1).
 
 2.Convert RPC XML object to .NET object
 ```powershell
@@ -57,7 +57,7 @@ ConvertFrom-RPCXmlObject -XmlObject $s2
 $s3= '<double>6.4</double>'
 ConvertFrom-RPCXmlObject -XmlObject $s3
 ```
-more to see  [ConvertFrom-RPCXmlObject](../test/ConvertFrom-RPCXmlObject.Test.ps1).
+more to see  [ConvertFrom-RPCXmlObject](test/ConvertFrom-RPCXmlObject.Test.ps1).
 
 3.New RPCMethod
 ```powershell
