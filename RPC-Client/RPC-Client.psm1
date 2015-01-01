@@ -37,7 +37,7 @@ function New-RPCMethod
 .DESCRIPTION
    Invoke XML_RPC request to RPC server.
 .EXAMPLE
-   $blogUrl = 'http://www.pstips.net/rpc.php'
+   $blogUrl = 'http://www.pstips.net/myrpc.php'
    $method = New-RPCMethod -MethodName 'wp.getPostTypes' -Params @(1,'userName','password')
 .OUTPUTS
    The response result from RPC server.
@@ -96,7 +96,7 @@ function ConvertTo-RPCXmlObject
     param(
     $Object
     )
-    if($Object)
+    if($Object -ne $null)
     {
         # integer type
         if( ($Object -is [int]) -or ($Object -is [int64]))

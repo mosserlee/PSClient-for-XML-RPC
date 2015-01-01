@@ -3,7 +3,7 @@ PSClient-for-XML-RPC
 
 Invoke Xml-RPC request by PowerShell client.
 A PowerShell module that help to send XML-RPC request.
-[Suppoted by http://www.pstips.net/](http://www.pstips.net/)
+[Suppoted by http://www.pstips.net/](http://www.pstips.net/rpc-client.html)
 
 Implemented features
 --------------------
