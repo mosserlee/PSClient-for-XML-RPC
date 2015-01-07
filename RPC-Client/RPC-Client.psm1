@@ -161,6 +161,22 @@ function ConvertTo-RPCXmlObject
             $result = $result + '</struct>'
             return $result
         }
+        elseif($Object -is [PSCustomObject])
+        {
+            $result = '<struct>'
+            $Object | 
+            Get-Member -MemberType NoteProperty | 
+            ForEach-Object{
+                $member = "<member>
+                <name>{0}</name>
+                <value>{1}</value>
+                </member>"
+                $member = $member -f $_.Name, (ConvertTo-RPCXmlObject -Object $Object.($_.Name))
+                $result = $result + $member
+            }
+            $result = $result + '</struct>'
+            return $result
+        }
         else{
             throw "[$Object] type is not supported."
         }
@@ -241,7 +257,7 @@ function ConvertFrom-RPCXmlObject
        $node.SelectNodes('member') | foreach {
         $hashTable.Add($_.name,(ConvertFrom-RPCXmlObject -XmlObject $_.value.FirstChild))
        }
-        $hashTable
+        [PSCustomObject]$hashTable
       }
     }
  }

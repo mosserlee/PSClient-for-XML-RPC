@@ -5,8 +5,8 @@ Invoke Xml-RPC request by PowerShell client.
 A PowerShell module that help to send XML-RPC request.
 [Suppoted by http://www.pstips.net/](http://www.pstips.net/rpc-client.html)
 
-Implemented features
---------------------
+Features
+--------
 - Convert PowerShell object to XML-RPC object string.
 - Convert XML-RPC object string to PowerShell object.
 - Generate a XML-RPC request string with method name and parameters. 
@@ -23,7 +23,7 @@ Data types map
 | System.Double |double|
 | System.Double.Int64 |integer|
 | System.String |string|
-| System.Collections.Hashtable|struct|
+| PSCustomObject or System.Collections.Hashtable|struct|
 
 Examples
 --------
